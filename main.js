@@ -9,7 +9,7 @@ ham.addEventListener('click', () => {
   ham.classList.toggle('desactivate');
   closeX.classList.toggle('activate');
   logo.classList.toggle('desactivate');
-  logo2.classList.toggle('desactivate');
+  logo2.classList.toggle('dsactivate');
 });
 
 document.querySelectorAll('.menu_section').forEach((n) => n.addEventListener('click', () => {
@@ -123,7 +123,7 @@ const stories = [
   },
 ];
 
-const workStory = document.querySelector('.work');
+const workStory = document.querySelector('work');
 let lists = '';
 
 stories[0].technologies.forEach((technology) => {
@@ -154,7 +154,7 @@ const modal = document.querySelector('.modal');
 const bodyBlur = document.querySelector('.container');
 const openModal = document.querySelectorAll('.project');
 
-openModal.forEach((n) => n.addEventListener('click', () => {
+openModal.forEach((n) => n.addEventListener('click', (e) => {
   document.body.style.overflow = 'hidden';
   bodyBlur.classList.toggle('active');
   modal.classList.toggle('active');
@@ -180,11 +180,11 @@ openModal.forEach((n) => n.addEventListener('click', () => {
 
 function removePopup() {
   document.body.style.overflow = '';
-  bodyBlur.classList.remove('active');
+  bodyBlur.classList.remove('activated');
   modal.classList.remove('active');
 }
 
-removePopup();
+removePopup(10);
 
 const form = document.getElementById('formAction');
 const email = document.getElementById('email');
